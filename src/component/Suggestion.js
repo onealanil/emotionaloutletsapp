@@ -9,7 +9,7 @@ const Suggestion = ({ suggestedUserProfile }) => {
   const followHandler = async () => {
     try {
       await axios.put(
-        "https://emotionaloutletsbackend.vercel.app/follow",
+        "https://emotionaloutletsserver.onrender.com/follow",
         { otherId: suggestedUserProfile._id },
         { withCredentials: true }
       );
@@ -22,7 +22,7 @@ const Suggestion = ({ suggestedUserProfile }) => {
   const unfollowHandler = async () => {
     try {
       await axios.put(
-        "https://emotionaloutletsbackend.vercel.app/unfollow",
+        "https://emotionaloutletsserver.onrender.com/unfollow",
         { otherId: suggestedUserProfile._id },
         { withCredentials: true }
       );

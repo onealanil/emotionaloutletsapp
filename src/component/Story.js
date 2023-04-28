@@ -30,7 +30,7 @@ const Story = ({ loggedUserData }) => {
 
   const sendStoryRequest = async () => {
     const res = await axios
-      .get("https://emotionaloutletsbackend.vercel.app/fetchStory", { withCredentials: true })
+      .get("https://emotionaloutletsserver.onrender.com/fetchStory", { withCredentials: true })
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -38,7 +38,7 @@ const Story = ({ loggedUserData }) => {
 
   const sendOwnStoryRequest = async () => {
     const res = await axios
-      .get("https://emotionaloutletsbackend.vercel.app/fetchOwnStory", { withCredentials: true })
+      .get("https://emotionaloutletsserver.onrender.com/fetchOwnStory", { withCredentials: true })
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -68,7 +68,7 @@ const Story = ({ loggedUserData }) => {
   }
 
   async function handleSubmitStory() {
-    const res = await axios.get("https://emotionaloutletsbackend.vercel.app/checkingStory", {
+    const res = await axios.get("https://emotionaloutletsserver.onrender.com/checkingStory", {
       withCredentials: true,
     });
     if (res.data.message === "you can") {
@@ -105,7 +105,7 @@ const Story = ({ loggedUserData }) => {
           img: x,
         };
         await axios
-          .post("https://emotionaloutletsbackend.vercel.app/uploadStory", data, {
+          .post("https://emotionaloutletsserver.onrender.com/uploadStory", data, {
             withCredentials: true,
           })
           .then(() => {

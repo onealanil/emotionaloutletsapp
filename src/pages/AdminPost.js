@@ -15,7 +15,7 @@ const AdminPost = () => {
   useEffect(() => {
     async function fetchAdminAllPost() {
       const response = await axios
-        .get("https://emotionaloutletsbackend.vercel.app/admin/getallpost", {
+        .get("https://emotionaloutletsserver.onrender.com/admin/getallpost", {
           withCredentials: true,
         })
         .catch((err) => console.log(err));
@@ -29,7 +29,7 @@ const AdminPost = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .get("https://emotionaloutletsbackend.vercel.app/user", { withCredentials: true })
+      .get("https://emotionaloutletsserver.onrender.com/user", { withCredentials: true })
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;

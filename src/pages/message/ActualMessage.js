@@ -23,7 +23,7 @@ const ActualMessage = ({ conversationId, conversationData, socket }) => {
 
   const sendRequest = async () => {
     const res = await axios
-      .get("https://emotionaloutletsbackend.vercel.app/user", { withCredentials: true })
+      .get("https://emotionaloutletsserver.onrender.com/user", { withCredentials: true })
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -40,7 +40,7 @@ const ActualMessage = ({ conversationId, conversationData, socket }) => {
     if (conversationId) {
       axios({
         method: "get",
-        url: `https://emotionaloutletsbackend.vercel.app/message/messagesCombo/${conversationId}`,
+        url: `https://emotionaloutletsserver.onrender.com/message/messagesCombo/${conversationId}`,
       })
         .then((result) => {
           setMessageCombo(result.data.result);
@@ -62,7 +62,7 @@ const ActualMessage = ({ conversationId, conversationData, socket }) => {
 
     axios({
       method: "post",
-      url: "https://emotionaloutletsbackend.vercel.app/message/messages",
+      url: "https://emotionaloutletsserver.onrender.com/message/messages",
       data,
       headers: config,
     })

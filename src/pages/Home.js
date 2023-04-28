@@ -12,7 +12,7 @@ const Home = ({ socket }) => {
 
   const sendRequest = async () => {
     const res = await axios
-      .get("https://emotionaloutletsbackend.vercel.app/user", { withCredentials: true })
+      .get("https://emotionaloutletsserver.onrender.com/user", { withCredentials: true })
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;

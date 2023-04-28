@@ -10,7 +10,7 @@ const Search = ({ props }) => {
 
   const sendRequestAllUser = async () => {
     const res = await axios
-      .get(`https://emotionaloutletsbackend.vercel.app/getalluser`, { withCredentials: true })
+      .get(`https://emotionaloutletsserver.onrender.com/getalluser`, { withCredentials: true })
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;

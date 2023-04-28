@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const baseUrl = "https://emotionaloutletsbackend.vercel.app/";
+const baseUrl = "https://emotionaloutletsserver.onrender.com/";
 
 const initialState = {
   createPostStatus: "",

@@ -63,7 +63,7 @@ const EditProfile = ({ props, loggedUserData }) => {
           bio: bio,
         };
         await axios
-          .put("https://emotionaloutletsbackend.vercel.app/editprofile", data, {
+          .put("https://emotionaloutletsserver.onrender.com/editprofile", data, {
             withCredentials: true,
           })
           .then(() => {
@@ -84,7 +84,7 @@ const EditProfile = ({ props, loggedUserData }) => {
         bio: bio,
       };
       await axios
-        .put("https://emotionaloutletsbackend.vercel.app/editprofile", data, {
+        .put("https://emotionaloutletsserver.onrender.com/editprofile", data, {
           withCredentials: true,
         })
         .then(() => {

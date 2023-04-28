@@ -17,7 +17,7 @@ const RightSide = ({ loggedUserData }) => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          "https://emotionaloutletsbackend.vercel.app/suggesteduser",
+          "https://emotionaloutletsserver.onrender.com/suggesteduser",
           { withCredentials: true }
         );
         if (response) {

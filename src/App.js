@@ -22,16 +22,18 @@ const App = () => {
 
   //for socketConnection
   useEffect(() => {
-    setSocket(io("https://emotionaloutletsbackend.vercel.app"));
+    setSocket(io("https://emotionaloutletsserver.onrender.com"));
   }, []);
-
-
 
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={isLoggedIn ? <Home socket={socket} /> : <Login />} exact />
+          <Route
+            path="/"
+            element={isLoggedIn ? <Home socket={socket} /> : <Login />}
+            exact
+          />
           <Route
             path="/profile"
             element={isLoggedIn ? <Profile /> : <Login />}

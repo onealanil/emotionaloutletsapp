@@ -33,7 +33,7 @@ const Profile = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .get("https://emotionaloutletsbackend.vercel.app/user", { withCredentials: true })
+      .get("https://emotionaloutletsserver.onrender.com/user", { withCredentials: true })
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -55,7 +55,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchSavedPosts = async () => {
       try {
-        const response = await axios.get("https://emotionaloutletsbackend.vercel.app/mysavedposts", {
+        const response = await axios.get("https://emotionaloutletsserver.onrender.com/mysavedposts", {
           withCredentials: true,
         });
         setSavedPosts(response.data.savedPosts);

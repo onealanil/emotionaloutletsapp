@@ -16,7 +16,7 @@ const TipsSingle = () => {
   useEffect(() => {
     async function fetchSinglePost() {
       const response = await axios
-        .get("https://emotionaloutletsbackend.vercel.app/admin/blognumber/" + id.id, {
+        .get("https://emotionaloutletsserver.onrender.com/admin/blognumber/" + id.id, {
           withCredentials: true,
         })
         .catch((err) => console.log(err));

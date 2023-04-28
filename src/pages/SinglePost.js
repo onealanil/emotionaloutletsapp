@@ -36,7 +36,7 @@ const SinglePost = ({
 
   const sendRequestComment = async () => {
     const res = await axios
-      .get(`https://emotionaloutletsbackend.vercel.app/post/${postData?._id}/comments`, {
+      .get(`https://emotionaloutletsserver.onrender.com/post/${postData?._id}/comments`, {
         withCredentials: true,
       })
       .catch((err) => console.log(err));
@@ -51,7 +51,7 @@ const SinglePost = ({
   const likePostHandler = async () => {
     try {
       const response = await axios.put(
-        "https://emotionaloutletsbackend.vercel.app/post/like",
+        "https://emotionaloutletsserver.onrender.com/post/like",
         { postId: postData?._id },
         { withCredentials: true }
       );
@@ -66,7 +66,7 @@ const SinglePost = ({
   const unlikePostHandler = async () => {
     try {
       const response = await axios.put(
-        "https://emotionaloutletsbackend.vercel.app/post/unlike",
+        "https://emotionaloutletsserver.onrender.com/post/unlike",
         { postId: postData?._id },
         { withCredentials: true }
       );
@@ -162,7 +162,7 @@ const SinglePost = ({
     e.preventDefault();
     try {
       const response = await axios.put(
-        "https://emotionaloutletsbackend.vercel.app/savepost",
+        "https://emotionaloutletsserver.onrender.com/savepost",
         { postId: postData?._id },
         { withCredentials: true }
       );
@@ -179,7 +179,7 @@ const SinglePost = ({
     e.preventDefault();
     try {
       const response = await axios.put(
-        "https://emotionaloutletsbackend.vercel.app/unsavepost",
+        "https://emotionaloutletsserver.onrender.com/unsavepost",
         { postId: postData?._id },
         { withCredentials: true }
       );

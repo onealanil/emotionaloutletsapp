@@ -20,7 +20,7 @@ const Message = ({ socket }) => {
 
   const sendRequest = async () => {
     const res = await axios
-      .get("https://emotionaloutletsbackend.vercel.app/message/conversation", {
+      .get("https://emotionaloutletsserver.onrender.com/message/conversation", {
         withCredentials: true,
       })
       .catch((err) => console.log(err));
@@ -30,7 +30,7 @@ const Message = ({ socket }) => {
 
   const sendRequestForLoggedUser = async () => {
     const res = await axios
-      .get("https://emotionaloutletsbackend.vercel.app/user", { withCredentials: true })
+      .get("https://emotionaloutletsserver.onrender.com/user", { withCredentials: true })
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;

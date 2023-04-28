@@ -29,7 +29,7 @@ const OtherProfile = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .get(`https://emotionaloutletsbackend.vercel.app/user/${id}`, { withCredentials: true })
+      .get(`https://emotionaloutletsserver.onrender.com/user/${id}`, { withCredentials: true })
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -37,7 +37,7 @@ const OtherProfile = () => {
 
   const sendRequestLoggedUser = async () => {
     const res = await axios
-      .get("https://emotionaloutletsbackend.vercel.app/user", { withCredentials: true })
+      .get("https://emotionaloutletsserver.onrender.com/user", { withCredentials: true })
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -64,7 +64,7 @@ const OtherProfile = () => {
   const followHandler = async () => {
     try {
       await axios.put(
-        "https://emotionaloutletsbackend.vercel.app/follow",
+        "https://emotionaloutletsserver.onrender.com/follow",
         { otherId: user?._id },
         { withCredentials: true }
       );
@@ -77,7 +77,7 @@ const OtherProfile = () => {
   const unfollowHandler = async () => {
     try {
       await axios.put(
-        "https://emotionaloutletsbackend.vercel.app/unfollow",
+        "https://emotionaloutletsserver.onrender.com/unfollow",
         { otherId: user?._id },
         { withCredentials: true }
       );
@@ -91,7 +91,7 @@ const OtherProfile = () => {
   const followbackHandler = async () => {
     try {
       await axios.put(
-        "https://emotionaloutletsbackend.vercel.app/followback",
+        "https://emotionaloutletsserver.onrender.com/followback",
         { otherId: user?._id },
         { withCredentials: true }
       );
@@ -104,7 +104,7 @@ const OtherProfile = () => {
   const addConversationHandler = async () => {
     await axios
       .post(
-        `https://emotionaloutletsbackend.vercel.app/message/conversation`,
+        `https://emotionaloutletsserver.onrender.com/message/conversation`,
         {
           senderId: loggedUser?._id,
           receiverId: user?._id,

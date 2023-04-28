@@ -24,7 +24,7 @@ const Card = ({
 
   const sendRequestComment = async () => {
     const res = await axios
-      .get(`https://emotionaloutletsbackend.vercel.app/post/${postData?._id}/comments`, {
+      .get(`https://emotionaloutletsserver.onrender.com/post/${postData?._id}/comments`, {
         withCredentials: true,
       })
       .catch((err) => console.log(err));

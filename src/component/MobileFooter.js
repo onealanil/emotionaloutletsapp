@@ -25,7 +25,7 @@ const MobileFooter = ({ socket }) => {
 
   async function sendNotificationRequest() {
     const response = await axios.get(
-      "https://emotionaloutletsbackend.vercel.app/post/notifications",
+      "https://emotionaloutletsserver.onrender.com/post/notifications",
       { withCredentials: true }
     );
     const notifications = response.data.notifications;
@@ -61,7 +61,7 @@ const MobileFooter = ({ socket }) => {
 
   const sendRequest = async () => {
     const res = await axios
-      .get("https://emotionaloutletsbackend.vercel.app/user", { withCredentials: true })
+      .get("https://emotionaloutletsserver.onrender.com/user", { withCredentials: true })
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -79,7 +79,7 @@ const MobileFooter = ({ socket }) => {
   useEffect(() => {
     async function fetchNotificationsCount() {
       const response = await axios
-        .get("https://emotionaloutletsbackend.vercel.app/post/notifications/count", {
+        .get("https://emotionaloutletsserver.onrender.com/post/notifications/count", {
           withCredentials: true,
         })
         .catch((err) => console.log(err));
@@ -103,7 +103,7 @@ const MobileFooter = ({ socket }) => {
   //send logout request
   const sendLogoutRequest = async () => {
     const res = await axios
-      .post("https://emotionaloutletsbackend.vercel.app/logout", { withCredentials: true })
+      .post("https://emotionaloutletsserver.onrender.com/logout", { withCredentials: true })
       .catch((err) => console.log(err));
   };
 
